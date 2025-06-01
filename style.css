@@ -9,26 +9,20 @@ body {
 
 /* Header */
 header {
-  header h1 {
-  font-size: 3rem;
-  margin: 0;
-}
   background-image: url('https://ik.imagekit.io/qyc6f4w6q/Capture.PNG?updatedAt=1748679388030');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: rgb(244, 241, 247);
-  padding: 3rem 1rem;
+  padding: 1.5rem 1rem;
   text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   font-family: 'Times New Roman', Times, serif;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative; /* Agar tidak sticky */
 }
 
 header h1 {
-  font-size: 5rem;
+  font-size: 2.5rem; /* Atur sesuai keinginan */
   margin: 0;
 }
 
