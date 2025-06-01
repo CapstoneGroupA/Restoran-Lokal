@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restoran Lokal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Restoran Lokal</h1>
+    <nav>
+      <ul>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#lokasi">Lokasi</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+    <button id="darkModeToggle">🌓 Mode Gelap</button>
+  </header>
+
+  <section id="profil">
+    <section id="tentang">
+  <h2 class="judul-tentang">Tentang Kami</h2>
+  <div class="isi-tentang">
+    <p><strong>Restoran Lokal</strong> hadir sebagai tempat terbaik untuk menikmati kelezatan kuliner khas Nusantara.</p>
+    <p>Kami percaya bahwa makanan bukan sekadar hidangan, melainkan warisan budaya yang patut dijaga dan dibagikan.</p>
+    <p>Dengan bahan-bahan segar pilihan dan resep tradisional dari berbagai daerah di Indonesia, kami menyajikan cita rasa autentik yang menggugah selera.</p>
+    <p>Mulai dari rendang yang kaya rempah hingga minuman tradisional yang menyegarkan, semua kami sajikan dengan sepenuh hati.</p>
+    <p>Kami juga berkomitmen memberikan pelayanan hangat dan ramah, menghadirkan suasana nyaman layaknya makan di rumah sendiri.</p>
+    <p>Baik untuk santap bersama keluarga, teman, maupun rekan kerja, <strong>Restoran Lokal</strong> adalah tempat yang tepat untuk menikmati momen istimewa Anda.</p>
+  </div>
+</section>
+
+
+  <section id="menu">
+    <h2>Menu Unggulan Restoran Lokal</h2>
+    <div class="menu-kategori">
+      <h3>Menu Makanan</h3>
+      <ul>
+        <li><strong>Rendang Ayam</strong> – Rp 35.000</li>
+        <li><strong>Rendang Daging Sapi</strong> – Rp 45.000</li>
+        <li><strong>Nasi Goreng</strong> – Rp 25.000</li>
+        <li><strong>Sate Ayam</strong> – Rp 20.000</li>
+      </ul>
+    </div>
+    <div class="menu-kategori">
+      <h3>Menu Minuman</h3>
+      <ul>
+        <li><strong>Wedang Uwuh</strong> – Rp 12.000</li>
+        <li><strong>Es Cendol</strong> – Rp 10.000</li>
+        <li><strong>Es Teler</strong> – Rp 10.000</li>
+        <li><strong>Es Dawet</strong> – Rp 10.000</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="galeri">
+    <h2>Galeri Makanan</h2>
+    <div class="galeri-grid">
+      <img src="https://www.unileverfoodsolutions.co.id/dam/global-ufs/mcos/SEA/calcmenu/recipes/ID-recipes/rendang-ayam/header_1.jpg" alt="Rendang Ayam" />
+      <img src="https://www.dapurkobe.co.id/wp-content/uploads/nasi-goreng-chili-oil-boncabe.jpg" alt="Nasi Goreng" />
+      <img src="https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/07/14053934/Mudah-Dibuat-di-Rumah-Ini-Resep-Sate-Ayam-Bumbu-Kacang-yang-Lezat-.jpg" alt="Sate Ayam" />
+      <img src="https://thumb.viva.id/vivapurwasuka/665x374/2025/01/02/6776a3685f2e6-es-cendol-ilustrasi_purwasuka.jpg" alt="Es Cendol" />
+    </div>
+  </section>
+
+  <section id="lokasi">
+    <h2>Lokasi Kami</h2>
+    <p>Kunjungi kami di alamat berikut:</p>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.470761736459!2d106.870313474096!3d-6.20145816074881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f513a27a8391%3A0x4344ddb4dc38326e!2sUniversitas%20Terbuka%20Jakarta%20Choir%20Club!5e0!3m2!1sid!2sid!4v1748672435803!5m2!1sid!2sid" 
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <section id="kontak">
+    <h2>Tulis Pesananmu Disini Untuk Layanan COD</h2>
+    <form id="formKontak" action="https://formspree.io/f/mjkrbapj" method="POST">
+      <label for="nama">Nama</label>
+      <input type="text" id="nama" name="nama" required />
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="pesan">Pesanan dan Alamat</label>
+      <textarea id="pesan" name="pesan" required></textarea>
+      
+      <button type="submit">Kirim</button>
+    </form>
+    <div id="responseMessage"></div>
+    <div id="toast" class="toast">✅ Pesanan berhasil dikirim</div>
+
+    <h3>Kontak Langsung</h3>
+    <ul class="kontak-list">
+      <li>
+        <strong>Cahyadi</strong><br />
+        📞 <a href="tel:+6282359221483">0823-5922-1483</a><br />
+        ✉️ <a href="mailto:cahyadi@email.com">cahyadi@email.com</a><br />
+        <a class="wa-button" href="https://wa.me/6282359221483" target="_blank">
+          <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WA" class="wa-icon" />
+          Hubungi via WhatsApp
+        </a>
+      </li>
+      <li>
+        <strong>Hany</strong><br />
+        📞 <a href="tel:+6282144951407">0821-4495-1407</a><br />
+        ✉️ <a href="mailto:hany@email.com">hany@email.com</a><br />
+        <a class="wa-button" href="https://wa.me/6282144951407" target="_blank">
+          <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WA" class="wa-icon" />
+          Hubungi via WhatsApp
+        </a>
+      </li>
+      <li>
+        <strong>Dimi</strong><br />
+        📞 <a href="tel:+6282210814057">0822-1081-4057</a><br />
+        ✉️ <a href="mailto:dimi@email.com">dimi@email.com</a><br />
+        <a class="wa-button" href="https://wa.me/6282210814057" target="_blank">
+          <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WA" class="wa-icon" />
+          Hubungi via WhatsApp
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <button id="backToTop" title="Kembali ke atas">⬆️</button>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("WV_tcQIpZfh_xjAhS");
+    document.getElementById("formKontak").addEventListener("submit", function(e) {
+      e.preventDefault();
+      emailjs.sendForm("service_restoran", "template_uw8bcyr", this)
+        .then(function(response) {
+          alert("✅ Pesan berhasil dikirim!");
+          document.getElementById("formKontak").reset();
+        }, function(error) {
+          console.error("❌ Gagal mengirim:", error);
+          alert("❌ Terjadi kesalahan saat mengirim. Cek koneksi atau pengaturan EmailJS.");
+        });
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
