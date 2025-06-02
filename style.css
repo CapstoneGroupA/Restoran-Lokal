@@ -1,289 +1,393 @@
 body {
   margin: 0;
-  font-family: 'Times New Roman';
-  line-height: 1.6;
-  padding: 16px;
-  background-color: #11353b;
-  color: #eeebeb;
+  padding-top: 130px;
+  font-family: 'Orbitron', sans-serif;
+  color: #ffffff;
+  background: linear-gradient(-45deg, #0d0d0d, #1a1a1a, #000000, #0d0d0d);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
 }
 
 /* Header */
 header {
-  background-image: url('https://ik.imagekit.io/qyc6f4w6q/Capture.PNG?updatedAt=1748679388030');
+  background-image: url('https://ik.imagekit.io/qyc6f4w6q/restoran_lokal_header_1920x256.png?updatedAt=1748760851494');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: rgb(244, 241, 247);
-  padding: 1.5rem 1rem;
-  text-align: center;
-  font-family: 'Times New Roman', Times, serif;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  position: relative; /* Agar tidak sticky */
+  color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 0 20px #39ff14, 0 0 40px #39ff14;
+  position: fixed;
+  top: 20px; /* Tambahkan jarak dari atas */
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 
+/* Hapus h1 jika tidak digunakan, atau sesuaikan */
 header h1 {
-  font-size: 2.5rem; /* Atur sesuai keinginan */
-  margin: 0;
+  display: none;
 }
 
+/* Navigasi utama di luar header */
+nav {
+  background-color: transparent;
+  box-shadow: none;
+  position: relative;
+  z-index: 998;
+  padding: 1rem 0;
+  margin-top: 120px; 
+  text-align: center;
+}
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  margin: 0;
   padding: 0;
+  gap: 40px;
 }
 
-nav a {
-  text-decoration: none;
-  color: #f3eded;
-}
-
-#darkModeToggle {
-  padding: 6px 12px;
-  border-radius: 5px;
-  border: none;
-  background-color: #3d1fac;
-  cursor: pointer;
-}
-
-/* Form dan Input */
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 14px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-button {
-  padding: 10px 16px;
-  border: none;
-  background-color: #444;
+nav ul li a {
   color: white;
-  border-radius: 6px;
-  cursor: pointer;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  text-shadow: 0 0 10px #39ff14;
 }
 
-button:hover {
-  background-color: #222;
+nav ul li a:hover {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
 }
 
-/* Dark Mode */
-body.dark-mode {
-  background-color: #111;
+/* Konten utama tidak tertutup header */
+body {
+  margin: 0;
+  padding-top: 200px; /* agar tidak tertutup header dan nav */
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(-45deg, #22b961, #1a1a1a, #000000, #0d0d0d);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: white;
+}
+
+/* Efek ketik untuk judul */
+.judul-tentang {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #00ffff;
+  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00ffff; }
+}
+
+/* Konten utama agar tidak ketutup */
+body {
+  padding-top: 100px;
+  background-color: #000;
   color: #eee;
 }
 
-body.dark-mode input,
-body.dark-mode textarea {
-  background-color: #333;
-  color: #b91820;
-  border-color: #555;
+header h1 {
+  color: #39ff14;
+  font-size: 2.5rem;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
+  animation: flicker 2s infinite alternate;
 }
 
-body.dark-mode a {
-  color: #ccc;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 1rem;
 }
 
-/* Scroll Smooth */
-html {
-  scroll-behavior: smooth;
+nav ul li {
+  margin: 0 1rem;
 }
 
-/* Galeri Grid */
+nav ul li a {
+  text-decoration: none;
+  color: #ebe8f0;
+  padding: 2rem;
+  transition: all 0.1s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #ff00ff;
+  border-bottom: 2px solid #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+section {
+  padding: 2rem;
+}
+
+h2, h3 {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  animation: flicker 3s infinite alternate;
+}
+
+.judul-tentang {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #00ffff;
+  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #111;
+  padding: 2rem;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 15px #00ffff;
+}
+
+input, textarea, button {
+  padding: 0.75rem;
+  background-color: #222;
+  color: #00ffff;
+  border: 1px solid #00ffff;
+  outline: none;
+}
+
+button {
+  background-color: #000;
+  color: #00ffff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #00ffff;
+  color: #000;
+  box-shadow: 0 0 10px #00ffff;
+}
+
 .galeri-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
 .galeri-grid img {
   width: 100%;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 10px #00ffff;
 }
 
-.galeri-grid img:hover {
-  transform: scale(1.05);
-}
-
-#filterKategori {
-  margin-bottom: 20px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-#filterKategori button {
-  padding: 8px 16px;
-  border: none;
-  background-color: #666;
-  color: white;
-  border-radius: 6px;
-}
-
-body.dark-mode #filterKategori button {
-  background-color: #bbb;
-  color: #111;
-}
-
-/* Toast */
-.toast {
-  visibility: hidden;
-  min-width: 250px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 8px;
-  padding: 14px;
-  position: fixed;
-  z-index: 999;
-  left: 50%;
-  bottom: 30px;
-  transform: translateX(-50%);
-  font-weight: bold;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.toast.show {
-  visibility: visible;
-  opacity: 1;
-}
-
-body.dark-mode .toast {
-  background-color: #ddd;
-  color: #111;
-}
-
-/* Back to top */
 #backToTop {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  display: none;
-  background-color: #444;
-  color: white;
-  border-radius: 50%;
-  padding: 10px 15px;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 999;
-}
-
-body.dark-mode #backToTop {
-  background-color: #ccc;
+  padding: 1rem;
+  background: #00ffff;
   color: #000;
-}
-
-/* Gaya khusus untuk bagian Tentang Kami */
-#profil {
-  background-color: #194149;
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  color: #ffffff;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-#profil h2 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 1rem;
-  text-shadow: 1px 1px 2px #000;
-}
-
-#profil p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  font-weight: bold;
-  text-align: justify;
-}
-#tentang {
-  background-color: #062c30; /* biru tua kehijauan */
-  color: #f8f9fa; /* putih lembut */
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.judul-tentang {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  color: #f4d35e; /* kuning pastel */
-  text-shadow: 2px 2px #000;
-}
-
-.isi-tentang {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 1.8;
-  text-align: justify;
-}
-
-.isi-tentang p {
-  margin-bottom: 20px;
-}
-form {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  max-width: 700px;
-  margin: auto;
-  backdrop-filter: blur(10px);
-}
-
-label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 16px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 15px;
-  margin-bottom: 20px;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  border-color: #ff914d;
-  box-shadow: 0 0 8px rgba(255, 145, 77, 0.5);
-  outline: none;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-button {
-  padding: 12px 25px;
-  background-color: #ff914d;
   border: none;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 0 10px #00ffff;
 }
 
-button:hover {
-  background-color: #e57c33;
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00ffff; }
+}
+.kontak-langsung {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 20px;
+  color: white;
+}
+
+.kontak-item {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 15px;
+  min-width: 200px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.kontak-item strong {
+  font-size: 18px;
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.kontak-detail a {
+  text-decoration: none;
+  color: #00aaff;
+}
+
+.kontak-detail a:hover {
+  color: #00ffff;
+}
+
+.wa-link {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  color: #00ccff;
+  font-weight: bold;
+}
+
+.wa-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+}
+.pesan-mengambang {
+  position: fixed;
+  right: -300px; /* awalnya tersembunyi */
+  bottom: 80px;
+  background-color: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px 0 0 8px;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+  font-weight: bold;
+  font-size: 14px;
+  z-index: 999;
+  animation: slideIn 2s forwards 1s; /* delay 1 detik, durasi 2 detik */
+}
+
+.pesan-mengambang a {
+  color: white;
+  text-decoration: none;
+}
+
+.pesan-mengambang:hover {
+  background-color: #128C7E;
+  cursor: pointer;
+}
+
+@keyframes slideIn {
+  to {
+    right: 20px;
+  }
+}
+
+/* WA Fake*/
+.wa-float {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 999;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.wa-button img {
+  width: 60px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 10px #25D366);
+  transition: transform 0.3s;
+}
+
+.wa-button img:hover {
+  transform: scale(1.1);
+}
+
+.wa-chatbox {
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 250px;
+  background-color: #1a1a1a;
+  border: 2px solid #25D366;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #25D366;
+  color: white;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.wa-header {
+  background-color: #25D366;
+  color: #000;
+  padding: 10px;
+  font-weight: bold;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-align: center;
+}
+
+.wa-body {
+  padding: 10px;
+  text-align: center;
+}
+
+.wa-start {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #25D366;
+  color: #000;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 5px #25D366;
+}
+
+.wa-start:hover {
+  background-color: #128C7E;
+  color: white;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
